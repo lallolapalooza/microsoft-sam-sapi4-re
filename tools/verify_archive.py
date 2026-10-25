@@ -37,8 +37,8 @@ with zipfile.ZipFile(ZIP) as z:
 
 # cross-check the loose manifests shipped in the repo
 for name in ('manifest.json', 'archive.json', 'SHA256SUMS'):
-    a = open(os.path.join(ARCH, name), 'rb').read()
-    b = zipfile.ZipFile(ZIP).read('archive/' + name)
+    a = open(os.path.join(ARCH, name), 'rb').read().replace(b'\r\n', b'\n')
+    b = zipfile.ZipFile(ZIP).read('archive/' + name).replace(b'\r\n', b'\n')
     if a != b:
         errors += 1; print('repo copy differs:', name)
 
