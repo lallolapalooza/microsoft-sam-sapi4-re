@@ -86,7 +86,8 @@ python tools/verify_structure.py            # source-database parse check
 `omp-session-archive.zip` was produced with
 [`omp-archive`](https://github.com/alosslessdev/omp-archive-main)
 (`xd://export_session_archive`): main transcript, untruncated tool logs,
-background-job state, and the standalone `viewer.html`.
+background-job state, and the standalone `viewer.html`. It is a snapshot taken
+before the publication/sanitization steps; `manifest.json` records the cutoff.
 
 SHA-256: `e3e326ab87d5426935840c9e17f2f59edcc6687cb5c040b18a2286d1ca56b09c`
 
